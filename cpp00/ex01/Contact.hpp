@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 18:53:40 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/28 20:07:23 by jrossett         ###   ########.fr       */
+/*   Created: 2022/10/28 21:17:19 by jrossett          #+#    #+#             */
+/*   Updated: 2022/10/28 21:26:02 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iomanip>
 #include <iostream>
@@ -38,23 +38,6 @@ class Contact {
 		std::string _phone_number;
 		std::string _darkest_secret;
 
-};
-
-class PhoneBook {
-
-	public:
-
-		PhoneBook(void);
-		~PhoneBook(void);
-
-		void add(void);
-		void search(void);
-
-	private:
-
-		int		_max_contact;
-		int		_nb_contact;
-		Contact _contact[8];
 };
 
 #endif

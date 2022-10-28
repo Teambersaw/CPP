@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 18:05:54 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/27 18:31:33 by jrossett         ###   ########.fr       */
+/*   Created: 2022/10/28 21:20:15 by jrossett          #+#    #+#             */
+/*   Updated: 2022/10/28 21:26:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
+#include <iomanip>
 #include <iostream>
+#include "Contact.hpp"
 
-int main(int ac, char **av)
-{
-	int i = 0;
-	int j;
+class PhoneBook {
 
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE NOISE *" << std::endl;
-	else
-	{
-		while (av[++i])
-		{
-			j = 0;
-			while (av[i][j])
-				std::cout << (char)(std::toupper(av[i][j++]));
+	public:
 
-		}
-		std::cout << std::endl;
-	}
-	return (0);
-}
+		PhoneBook(void);
+		~PhoneBook(void);
+
+		void add(void);
+		void search(void);
+
+	private:
+
+		int		_max_contact;
+		int		_nb_contact;
+		Contact _contact[8];
+};
+
+#endif
