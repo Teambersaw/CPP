@@ -6,14 +6,14 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:14:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/29 22:49:33 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/30 11:55:51 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
 
-#include "Weapon.hpp"
+# include "Weapon.hpp"
 
 class HumanB
 {
@@ -23,7 +23,7 @@ class HumanB
 		~HumanB( void );
 
 		void	attack( void ) const;
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon &weapon);
 
 	private:
 
