@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:48:49 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/30 19:46:45 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/31 13:45:23 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int main( void ) {
 	harl.complain("DEBUG");
 	harl.complain("INFO");
 	harl.complain("WARNING");
-	harl.complain("ERROR");
+	harl.complain("ERRdOR");
 	return (0);
 }

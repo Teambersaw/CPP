@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:49:18 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/30 21:07:19 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/31 13:45:14 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,37 @@ Harl::~Harl( void ) {
 
 void Harl::debug( void ) {
 	std::cout << "[DEBUG]" << std::endl;
-	std::cout << "This is a DEBUG message !" << std::endl;
+	std::cout << "This is an DEBUG message !" << std::endl;
 	return ;
 }
 
 void Harl::info( void ) {
 	std::cout << "[INFO]" << std::endl;
-	std::cout << "This is a INFO message !" << std::endl;
+	std::cout << "This is an INFO message !" << std::endl;
 	return ;
 }
 
 void Harl::warning( void ) {
 	std::cout << "[WARNING]" << std::endl;
-	std::cout << "This is a WARNING message !" << std::endl;
+	std::cout << "This is an WARNING message !" << std::endl;
 	return ;
 }
 
 void Harl::error( void ) {
 	std::cout << "[ERROR]" << std::endl;
-	std::cout << "This is a ERROR message !" << std::endl;
+	std::cout << "This is an ERROR message !" << std::endl;
 	return ;
 }
 
 void Harl::complain( std::string level ) {
+	void (Harl::*f[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (int i = 0; i < 4; i++) {
+		if (str[i] == level) {
+			(this->*f[i])();
+			return ;
+		}
+	}
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	return ;
 }
