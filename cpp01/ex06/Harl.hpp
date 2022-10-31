@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 18:48:49 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 13:48:03 by jrossett         ###   ########.fr       */
+/*   Created: 2022/10/30 18:47:51 by jrossett          #+#    #+#             */
+/*   Updated: 2022/10/31 14:12:09 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main( void ) {
+# include <iostream>
 
-	Harl	harl;
+class	Harl {
 
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	harl.complain("ERROR");
-	return (0);
-}
+	public:
+
+		Harl( void );
+		~Harl( void );
+
+		void filter(std::string level);
+		void complain( int i );
+
+	private:
+
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void );
+
+};
+
+#endif
