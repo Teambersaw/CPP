@@ -6,15 +6,15 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:17:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/28 21:26:02 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/31 10:00:44 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
-#define CONTACT_HPP
+# define CONTACT_HPP
 
-#include <iomanip>
-#include <iostream>
+# include <iomanip>
+# include <iostream>
 
 class Contact {
 

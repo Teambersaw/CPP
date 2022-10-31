@@ -6,14 +6,15 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:14:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/30 11:55:51 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/31 10:03:37 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
-#define HUMANB_HPP
+# define HUMANB_HPP
 
 # include "Weapon.hpp"
+# include <iostream>
 
 class HumanB
 {

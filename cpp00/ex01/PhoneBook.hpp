@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:20:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/28 21:26:19 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/10/31 10:00:59 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-#include <iomanip>
-#include <iostream>
-#include "Contact.hpp"
+# include "Contact.hpp"
+# include <iomanip>
+# include <iostream>
 
 class PhoneBook {
 
