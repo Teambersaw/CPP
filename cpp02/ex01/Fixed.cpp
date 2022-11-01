@@ -6,20 +6,15 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/01 18:29:15 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:55:36 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int Fixed::getRawBits( void ) const {
-	std::cout << "getRawBits member function called" << std::endl;
-	return this->_fixe;
-}
-
-void Fixed::setRawBits( int const raw ) {
-	this->_fixe = raw;
-	return ;
+std::ostream &	operator<<( std::ostream & o, Fixed const & i) {
+	o << i.toFloat();
+	return (o);
 }
 
 Fixed::Fixed( void ) : _fixe(0) {
@@ -33,8 +28,35 @@ Fixed::Fixed( Fixed const & fixed ) {
 	return ;
 }
 
+Fixed::Fixed( const int integer) {
+	std::cout << "Int constructor called" << std::endl;
+	return ;
+}
+
+Fixed::Fixed( const float floater) {
+	std::cout << "Float constructor called" << std::endl;
+	return ;
+}
+
 Fixed::~Fixed( void ) {
 	std::cout << "Destructor called" << std::endl;
+	return ;
+}
+
+int Fixed::toInt( void ) const {
+	return (1);
+}
+
+float Fixed::toFloat( void ) const {
+	return (1.2);
+}
+
+int Fixed::getRawBits( void ) const {
+	return this->_fixe;
+}
+
+void Fixed::setRawBits( int const raw ) {
+	this->_fixe = raw;
 	return ;
 }
 
