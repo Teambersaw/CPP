@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:32 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/01 15:18:43 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/01 18:13:02 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class	Fixed {
 
 	private:
 
-		int fixe;
-		int static const bits;
+		int _fixe;
+		static const int _bits = 8;
 
 };
 
