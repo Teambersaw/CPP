@@ -6,20 +6,18 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:33:05 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/30 18:45:38 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/03 17:15:27 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sed.hpp"
 
-int main( void )
+int main(int ac, char **av)
 {
-	std::string file;
-	std::string s1;
-	std::string s2;
-	file = "sed.cpp";
-	s1 = "std::string";
-	s2 = "I AM A BUTTERFLY NOW";
-	sed(file, s1, s2);
+	if (ac != 4) {
+		std::cout << "The program need 3 arguments" << std::endl;
+		return (0);
+	}
+	sed(av[1], av[2], av[3]);
 	return (0);
 }

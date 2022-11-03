@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/01 18:55:36 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:50:37 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ Fixed::Fixed( Fixed const & fixed ) {
 
 Fixed::Fixed( const int integer) {
 	std::cout << "Int constructor called" << std::endl;
+	_fixe = integer << _bits;
 	return ;
 }
 
 Fixed::Fixed( const float floater) {
 	std::cout << "Float constructor called" << std::endl;
+	_fixe = roundf(floater * (float)(1 << _bits));
 	return ;
 }
 
@@ -44,11 +46,11 @@ Fixed::~Fixed( void ) {
 }
 
 int Fixed::toInt( void ) const {
-	return (1);
+	return (_fixe >> 8);
 }
 
 float Fixed::toFloat( void ) const {
-	return (1.2);
+	return (float)_fixe / (float)(1 << _bits);
 }
 
 int Fixed::getRawBits( void ) const {
