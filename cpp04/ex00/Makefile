@@ -1,10 +1,10 @@
 CC= c++
 
-CFLAGS= -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CFLAGS= -Wall -Wextra -Werror -std=c++98
 
-HEADER= Animal.hpp Cat.hpp Dog.hpp
+HEADER= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
-SRCS= main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRCS= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS= ${SRCS:.cpp=.o}
 

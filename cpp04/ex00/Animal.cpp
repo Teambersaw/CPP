@@ -6,13 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:39:09 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 17:11:41 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/04 19:50:30 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal( void ) {
+Animal::Animal( void ) : type("none") {
 	std::cout << "Default Animal contructor called" << std::endl;
 	return ;
 }
@@ -34,13 +34,10 @@ Animal & Animal::operator=( Animal const & animal ) {
 	return (*this);
 }
 
-std::string	Animal::getType( void )  const{
-	return (type);
+std::string	Animal::getType( void ) const{
+	return (this->type);
 }
 
 void	Animal::makeSound( void ) const{
-	if (getType() == "Dog")
-		std::cout << "BARK BARK" << std::endl;
-	else if (getType() == "Cat")
-		std::cout << "Meow Meow" << std::endl;
+		std::cout << "No sound for Animal" << std::endl;
 }

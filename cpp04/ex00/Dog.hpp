@@ -26,10 +26,7 @@ class Dog : public Animal {
 
 		Dog & operator=( Dog const & Dog);
 
-	private:
-
-		std::string type;
-
+		void	makeSound( void ) const;
 };
 
 #endif
