@@ -27,11 +27,6 @@ class WrongCat : public WrongAnimal {
 		WrongCat & operator=( WrongCat const & WrongCat);
 
 		void	makeSound( void ) const;
-
-	private:
-
-		std::string type;
-
 };
 
 #endif

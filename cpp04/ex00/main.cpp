@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:38:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 19:49:56 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/04 20:03:20 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main( void ) {
 
 	std::cout << j->getType() << std::endl;
 	std::cout << i->getType() << std::endl;
+	std::cout << wrong->getType() << std::endl;
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
