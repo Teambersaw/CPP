@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/03 16:50:37 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 19:50:53 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Fixed::~Fixed( void ) {
 }
 
 int Fixed::toInt( void ) const {
-	return (_fixe >> 8);
+	return (_fixe >> _bits);
 }
 
 float Fixed::toFloat( void ) const {

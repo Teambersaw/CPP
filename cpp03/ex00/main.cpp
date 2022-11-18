@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:43:18 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 12:34:23 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 23:50:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main()
 
 	trap = Trap_name;
 	
+	std::cout << std::endl;
 	trap.attack("Saitama");
 	trap.attack("Saitama");
 	trap.takeDamage(5);
@@ -44,7 +45,7 @@ int main()
 	trap.takeDamage(11111111);
 
 
-	std::cout << "\n\n\n\n\n" << std::endl;
+	std::cout << std::endl << std::endl << std::endl;
 	copy.attack("Saitama");
 	copy.attack("Saitama");
 	copy.takeDamage(5);

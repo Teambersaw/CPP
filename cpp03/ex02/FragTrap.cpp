@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:57:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 16:26:32 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 23:52:16 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 FragTrap::FragTrap( void ) : ClapTrap() {
 	std::cout << "Default FragTrap constructor called" << std::endl;
 	this->_Hit_points = 100;
-	this->_Energy_points = 50;
+	this->_Energy_points = 100;
 	this->_Attack_damage = 30;
 	return ;
 }
@@ -23,7 +23,7 @@ FragTrap::FragTrap( void ) : ClapTrap() {
 FragTrap::FragTrap( std::string Name ) : ClapTrap(Name) {
 	std::cout << "Name FragTrap constructor called" << std::endl;
 	this->_Hit_points = 100;
-	this->_Energy_points = 50;
+	this->_Energy_points = 100;
 	this->_Attack_damage = 30;
 	return ;
 }
@@ -31,7 +31,7 @@ FragTrap::FragTrap( std::string Name ) : ClapTrap(Name) {
 FragTrap::FragTrap( FragTrap const & fragtrap) : ClapTrap() {
 	std::cout << "Copy FragTrap constructor called" << std::endl;
 	this->_Hit_points = 100;
-	this->_Energy_points = 50;
+	this->_Energy_points = 100;
 	this->_Attack_damage = 30;
 	*this = fragtrap;
 	return ;
