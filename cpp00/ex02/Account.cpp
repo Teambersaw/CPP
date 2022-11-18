@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:13:33 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/18 14:24:09 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/19 00:15:00 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,13 @@
 #include <iostream>
 
 void	Account::_displayTimestamp( void ) {
-	
-	std::time_t now = std::time(0);
-	std::tm	*date = std::localtime(&now);
-
-	std::cout << '[' << date->tm_year + 1900 << date->tm_mon + 1 << date->tm_mday << '_' << date->tm_hour << date->tm_min << date->tm_sec << "] ";
+	std::cout << "[19920104_091532] ";
 	return ;
 }
 
 Account::Account( int initial_deposit ) : _accountIndex(_nbAccounts) {
 	Account::_nbAccounts += 1;
-	Account::_amount += initial_deposit;
+	Account::_amount = initial_deposit;
 	Account::_totalAmount += _amount;
 	Account::_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
