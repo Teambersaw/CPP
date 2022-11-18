@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:38:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/07 23:59:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:58:29 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,10 @@ int main( void )
 	for (int i = 0; i < 100; i++) {
 		delete animal[i];
 	}
+	std::cout << std::endl;
+	Animal cat = Cat();
+	std::cout << std::endl;
+	cat.makeSound();
+	std::cout << std::endl;
 	return (0);
 }

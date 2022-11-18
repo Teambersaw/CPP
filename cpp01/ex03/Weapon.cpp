@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:14:00 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 10:03:54 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 10:06:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	Weapon::setType(std::string value) {
 	return ;
 }
 
-std::string	&Weapon::getType() {
+std::string	const &Weapon::getType() {
 	return (type);
 }

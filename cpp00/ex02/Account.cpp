@@ -6,20 +6,21 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:13:33 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/29 15:18:12 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 14:24:09 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <ctime>
 #include <iomanip>
-#include <chrono>
 #include <iostream>
 
 void	Account::_displayTimestamp( void ) {
-	time_t const now = time(NULL);
+	
+	std::time_t now = std::time(0);
+	std::tm	*date = std::localtime(&now);
 
-	std::cout << '[' << std::put_time(localtime(&now), "%Y%m%d_%I%M%S") << "] ";
+	std::cout << '[' << date->tm_year + 1900 << date->tm_mon + 1 << date->tm_mday << '_' << date->tm_hour << date->tm_min << date->tm_sec << "] ";
 	return ;
 }
 

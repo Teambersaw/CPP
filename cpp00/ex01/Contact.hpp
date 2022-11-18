@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:17:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 10:00:44 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 10:15:24 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iomanip>
 # include <iostream>
+# include <cstdlib>
 
 class Contact {
 
@@ -32,6 +33,7 @@ class Contact {
 		void aff_contact(void);
 
 	private:
+
 		std::string _first_name;
 		std::string _last_name;
 		std::string _nickname;

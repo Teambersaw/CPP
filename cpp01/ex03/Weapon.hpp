@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 19:11:38 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 10:03:27 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 10:06:13 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
 		Weapon(std::string Weapon);
 		~Weapon( void );
 
-		std::string &getType();
+		std::string const &getType();
 		void	setType(std::string value);
 
 	private:

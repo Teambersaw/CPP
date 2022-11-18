@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:35:41 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/03 17:15:27 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/17 11:22:22 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sed.hpp"
+#include <fstream>
 
 int sed(std::string file, std::string s1, std::string s2)
 {
@@ -23,10 +24,10 @@ int sed(std::string file, std::string s1, std::string s2)
 		std::cout << "Please, make sure s1 is not empty." << std::endl; 
 		return (0);
 	}
-	std::ifstream ifs(file);
+	std::ifstream ifs(file.c_str());
 	if (ifs.is_open())
 	{
-		std::ofstream ofs(file.append(".replace"));
+		std::ofstream ofs(file.append(".replace").c_str());
 		while (ifs.get(c))
 			str += c;
 		ifs.close();
@@ -37,6 +38,7 @@ int sed(std::string file, std::string s1, std::string s2)
 				j = i + s1.length();
 			str.erase(i, s1.length());
 			str.insert(i, s2);
+			j += s2.length();
 		}
 		ofs << str;
 		ofs.close();

@@ -6,13 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:53:38 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/28 21:22:19 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/18 10:09:46 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void) : _nb_contact(0), _max_contact(0) {
+PhoneBook::PhoneBook(void) : _max_contact(0), _nb_contact(0) {
 	return ;
 }
 

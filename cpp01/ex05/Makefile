@@ -1,6 +1,6 @@
-CC= c++
+CXX= c++
 
-CFLAGS= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 
 HEADER= Harl.hpp
 
@@ -11,7 +11,7 @@ OBJS= ${SRCS:.cpp=.o}
 NAME= Harl
 
 ${NAME}: ${OBJS} ${HEADER}
-		${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+		${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
 all: ${NAME}
 
