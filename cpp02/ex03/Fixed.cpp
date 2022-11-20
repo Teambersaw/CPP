@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/18 23:23:43 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/20 19:23:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ int Fixed::getRawBits( void ) const {
 void Fixed::setRawBits( int const raw ) {
 	this->_fixe = raw;
 	return ;
+}
+
+Fixed const & Fixed::operator=( Fixed const & fixed ) const {
+	if (this != &fixed)
+		(const_cast<Fixed *>(this))->_fixe = fixed.getRawBits();
+	return *this;
 }
 
 Fixed & Fixed::operator=( Fixed const & fixed ) {
@@ -104,11 +110,11 @@ Fixed Fixed::operator+( Fixed const & fixed ) {
 	return (Fixed(this->toFloat() + fixed.toFloat()));
 }
 
-Fixed Fixed::operator-( Fixed const & fixed ) {
+Fixed const Fixed::operator-( Fixed const & fixed ) const {
 	return (Fixed(this->toFloat() - fixed.toFloat()));
 }
 
-Fixed Fixed::operator*( Fixed const & fixed ) {
+Fixed const Fixed::operator*( Fixed const & fixed ) const {
 	return (Fixed(this->toFloat() * fixed.toFloat()));
 }
 

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:35:41 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/19 15:22:53 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/20 15:52:25 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int sed(std::string file, std::string s1, std::string s2)
 	std::string str;
 	int	j = 0;
 	int i = 0;
-	char c;
 
 	if (s1.empty()) {
 		std::cout << "Please, make sure s1 is not empty." << std::endl; 
@@ -28,8 +27,7 @@ int sed(std::string file, std::string s1, std::string s2)
 	if (ifs.is_open())
 	{
 		std::ofstream ofs(file.append(".replace").c_str());
-		while (ifs.get(c))
-			str += c;
+		std::getline(ifs, str, ifs.widen(EOF));
 		ifs.close();
 		while ((i = str.find(s1, j)) != -1)
 		{

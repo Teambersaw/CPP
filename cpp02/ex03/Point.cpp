@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 00:16:31 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/20 00:58:13 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/20 16:06:17 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,18 @@ Point::Point( Point const & point ) {
 	*this = point;
 }
 
-Point & Point::operator=( Point const & point) {
-	if (this != &point) {
-		return *this;
+Fixed	 const Point::getX( void ) const {
+	return (this->x);
+}
+
+Fixed	const Point::getY( void ) const {
+	return (this->y);
+}
+
+Point & Point::operator=( Point const & points) {
+	if (this != &points) {
+		this->x = points.getX();
+		this->y = points.getY();
 	}
 	return *this;
 }

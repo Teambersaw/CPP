@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:53:38 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/18 10:09:46 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/20 15:57:55 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void PhoneBook::search(void) {
 		}
 		if (c.empty() == false)
 		{
-			index = atoi(c.c_str());
+			index = std::atoi(c.c_str());
 			if (c.length() == 1 && (index >= 1 && index <= 8))
 			{
 				if (index > _max_contact)
