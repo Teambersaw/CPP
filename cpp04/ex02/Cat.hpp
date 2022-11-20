@@ -22,12 +22,14 @@ class Cat : public Animal {
 	public:
 
 		Cat( void );
-		Cat( Cat const &Cat);
-		~Cat( void );
+		Cat( Cat const &Cat );
+		virtual ~Cat( void );
 
-		Cat & operator=( Cat const & Cat);
+		Cat & operator=( Cat const & Cat );
+		virtual void	makeSound( void ) const;
 
-		void	makeSound( void ) const;
+		std::string const &getIdea( int const i ) const;
+		void	setIdea( std::string idea, int const i );
 
 	private:
 

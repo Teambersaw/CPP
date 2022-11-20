@@ -33,12 +33,25 @@ Dog::~Dog( void ) {
 	return ;
 }
 
-Dog & Dog::operator=( Dog const & Dog ) {
-	if (this != &Dog)
-		type = Dog.type;
+Dog & Dog::operator=( Dog const & Dogs ) {
+	if (this != &Dogs)
+	{
+		for (int i = 0; i < 100; i++) {
+			this->dog->setIdeas(Dogs.dog->getIdeas(i), i);
+		}
+		this->type = Dogs.type;
+	}
 	return (*this);
 }
 
 void	Dog::makeSound( void ) const{
 		std::cout << "BARK BARK" << std::endl;
+}
+
+std::string const &Dog::getIdea( int const i ) const {
+	return (dog->getIdeas(i));
+}
+
+void	Dog::setIdea( std::string idea, int const i) {
+	dog->setIdeas( idea, i);
 }

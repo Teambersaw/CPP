@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:39:09 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/08 00:06:56 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/20 00:08:34 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ Animal & Animal::operator=( Animal const & animal ) {
 	return (*this);
 }
 
-std::string	Animal::getType( void ) const{
+std::string	const &Animal::getType( void ) const{
 	return (this->type);
 }

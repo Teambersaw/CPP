@@ -22,11 +22,11 @@ class Cat : public Animal {
 
 		Cat( void );
 		Cat( Cat const &Cat);
-		~Cat( void );
+		virtual	~Cat( void );
 
 		Cat & operator=( Cat const & Cat);
 
-		void	makeSound( void ) const;
+		virtual void	makeSound( void ) const;
 };
 
 #endif

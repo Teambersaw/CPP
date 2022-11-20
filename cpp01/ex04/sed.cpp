@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 12:35:41 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/17 11:22:22 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/19 15:22:53 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int sed(std::string file, std::string s1, std::string s2)
 		while ((i = str.find(s1, j)) != -1)
 		{
 			j = i;
-			if (s1.compare(s2) == 0)
-				j = i + s1.length();
 			str.erase(i, s1.length());
 			str.insert(i, s2);
 			j += s2.length();

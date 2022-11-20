@@ -6,13 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:39:09 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 19:50:30 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:14:53 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal( void ) : type("none") {
+Animal::Animal( void ) : type("animal") {
 	std::cout << "Default Animal contructor called" << std::endl;
 	return ;
 }
@@ -34,7 +34,7 @@ Animal & Animal::operator=( Animal const & animal ) {
 	return (*this);
 }
 
-std::string	Animal::getType( void ) const{
+std::string	const & Animal::getType( void ) const{
 	return (this->type);
 }
 

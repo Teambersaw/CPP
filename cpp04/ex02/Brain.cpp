@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:56:12 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/07 23:52:18 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:55:06 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,12 @@ Brain & Brain::operator=( Brain const & Brain ) {
 			ideas[i] = Brain.ideas[i];
 	}
 	return (*this);
+}
+
+std::string	const &Brain::getIdeas( int const i) const {
+	return (ideas[i]);
+}
+
+void	Brain::setIdeas( std::string idea, int const i) {
+	ideas[i] = idea;
 }

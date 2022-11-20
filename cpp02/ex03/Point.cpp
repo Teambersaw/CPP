@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 16:39:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/19 16:22:54 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/20 00:16:31 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/20 00:58:13 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Point.hpp"
 
-# include <iostream>
+Point::Point( void ) : x(0), y(0) {
+	return ;	
+}
 
-class Animal {
+Point::~Point( void ) {
+	return ;
+}
 
-	public:
+Point::Point( float const f1, float const f2 ) : x(f1), y(f2) {
+	return ;	
+}
 
-		Animal( void );
-		Animal( Animal const &animal);
-		virtual ~Animal( void );
+Point::Point( Point const & point ) {
+	*this = point;
+}
 
-		Animal & operator=( Animal const & animal);
-
-		std::string		const &getType( void ) const;
-		virtual	void	makeSound( void ) const;
-
-	protected:
-
-		std::string type;
-
-};
-
-#endif
+Point & Point::operator=( Point const & point) {
+	if (this != &point) {
+		return *this;
+	}
+	return *this;
+}

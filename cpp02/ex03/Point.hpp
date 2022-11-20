@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 16:39:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/19 16:22:54 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/20 00:16:28 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/20 00:57:48 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
 # include <iostream>
+# include "Fixed.hpp"
 
-class Animal {
+class Point {
 
 	public:
 
-		Animal( void );
-		Animal( Animal const &animal);
-		virtual ~Animal( void );
+		Point( void );
+		Point( Point const & point );
+		Point( float const f1, float const f2);
+		~Point( void );
 
-		Animal & operator=( Animal const & animal);
+		Point & operator=( Point const & point );
 
-		std::string		const &getType( void ) const;
-		virtual	void	makeSound( void ) const;
+	private:
 
-	protected:
-
-		std::string type;
-
+		Fixed  const x;
+		Fixed const y;
+;
 };
 
 #endif

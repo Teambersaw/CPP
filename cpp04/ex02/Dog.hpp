@@ -23,12 +23,14 @@ class Dog : public Animal {
 
 		Dog( void );
 		Dog( Dog const &Dog);
-		~Dog( void );
+		virtual ~Dog( void );
 
 		Dog & operator=( Dog const & Dog);
+		virtual void	makeSound( void ) const;
 
-		void	makeSound( void ) const;
-	
+		std::string const &getIdea( int const i ) const;
+		void	setIdea( std::string idea, int const i );
+
 	private:
 
 		Brain*	dog;

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:55:44 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/05 12:02:09 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/19 19:29:35 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ class Brain {
 
 		Brain & operator=( Brain const & Brain);
 
-	protected:
+		std::string	const &getIdeas( int const i) const;
+		void	setIdeas( std::string idea, int const i);
+
+	private:
 
 		std::string ideas[100];
 
