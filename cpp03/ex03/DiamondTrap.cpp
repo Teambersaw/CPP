@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:23:22 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/18 15:04:52 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:26:25 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,4 @@ void	DiamondTrap::whoAmI( void ) {
 	std::cout << "DiamondTrap Name : " << _Name << std::endl;
 	std::cout << "ClapTrap Name : " << ClapTrap::_Name << std::endl;
 	return ;
-}
-
-void	DiamondTrap::attack(const std::string &target) {
-	ScavTrap::attack(target);
 }

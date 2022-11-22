@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:49:18 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 15:10:54 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 11:41:00 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,30 +52,15 @@ void Harl::filter(std::string level) {
 	switch ( i )
 	{
 		case 0:
-			Harl::complain(0);
-			break;
+			Harl::debug();
 		case 1:
-			Harl::complain(1);
-			break;
+			Harl::info();
 		case 2:
-			Harl::complain(2);
-			break;
+			Harl::warning();
 		case 3:
-			Harl::complain(3);
+			Harl::error();
 			break;
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl; 
-
 	}
-}
-
-void Harl::complain( int i) {
-	void (Harl::*f[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	while (i < 4)
-	{
-		(this->*f[i])();
-		i++;
-	}
-	return ;
 }

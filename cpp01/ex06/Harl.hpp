@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:47:51 by jrossett          #+#    #+#             */
-/*   Updated: 2022/10/31 14:12:09 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 11:34:47 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class	Harl {
 		~Harl( void );
 
 		void filter(std::string level);
-		void complain( int i );
 
 	private:
 

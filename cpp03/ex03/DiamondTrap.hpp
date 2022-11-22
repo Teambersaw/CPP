@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:23:40 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 16:09:27 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:26:17 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		~DiamondTrap( void );
 
 		DiamondTrap & operator=( DiamondTrap const &diamontrap);
-		void	attack(const std::string &target);
+		using ScavTrap::attack;
 		void whoAmI();
 
 	private:
