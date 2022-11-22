@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:32 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/21 14:27:31 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 23:55:26 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class	Fixed {
  
 		Fixed const &	operator=( Fixed const & fixed ) const;
 		Fixed &	operator=( Fixed const & fixed );
-		Fixed const operator+( Fixed const & fixed ) const;
+		Fixed		operator+( Fixed const & fixed );
 		Fixed const operator-( Fixed const & fixed ) const;
 		Fixed const operator*( Fixed const & fixed ) const;
 		Fixed	operator/( Fixed const & fixed );
@@ -45,10 +45,10 @@ class	Fixed {
 		Fixed &	operator--();
 		Fixed	operator--(int);
 
-		static Fixed	&min(Fixed &fixe1, Fixed &fixe2);
-		static Fixed const &min(Fixed const &fixe1, Fixed const &fixe2);
-		static Fixed &max(Fixed &fixe1, Fixed &fixe2);
-		static Fixed const &max(Fixed const &fixe1, Fixed const &fixe2);
+		static Fixed		min(Fixed &fixe1, Fixed &fixe2);
+		static Fixed const	min(Fixed const &fixe1, Fixed const &fixe2);
+		static Fixed		max(Fixed &fixe1, Fixed &fixe2);
+		static Fixed const	max(Fixed const &fixe1, Fixed const &fixe2);
 
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );

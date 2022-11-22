@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:15:58 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/18 20:38:38 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 23:26:36 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main( void )
     std::cout << "c : " << c << std::endl << std::endl;
 
     /* Incrementation operands */
-	 std::cout << ++f << std::endl;
+	std::cout << ++f << std::endl;
     std::cout << f << std::endl;
     std::cout << f++ << std::endl;
     std::cout << f << std::endl << std::endl;

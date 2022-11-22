@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:16:21 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/21 14:27:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/22 23:55:48 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ bool Fixed::operator!=( Fixed const & fixed ) const {
 }
 
 
-Fixed const Fixed::operator+( Fixed const & fixed ) const {
+Fixed Fixed::operator+( Fixed const & fixed ) {
 	return (Fixed(this->toFloat() + fixed.toFloat()));
 }
 
@@ -144,28 +144,28 @@ Fixed Fixed::operator--(int) {
 	return (tmp);
 }
 
-Fixed const	&Fixed::min(Fixed const &fixed1, Fixed const &fixed2){
+Fixed const	Fixed::min(Fixed const &fixed1, Fixed const &fixed2){
 	std::cout << "min const called : ";
 	if (fixed1 < fixed2)
 		return (fixed1);
 	return (fixed2);
 }
 
-Fixed	&Fixed::min(Fixed &fixed1, Fixed &fixed2){
+Fixed	Fixed::min(Fixed &fixed1, Fixed &fixed2){
 	std::cout << "min called : ";
 	if (fixed1 < fixed2)
 		return (fixed1);
 	return (fixed2);
 }
 
-Fixed const	&Fixed::max(Fixed const &fixed1, Fixed const &fixed2){
+Fixed const	Fixed::max(Fixed const &fixed1, Fixed const &fixed2){
 	std::cout << "max const called : ";
 	if (fixed1 > fixed2)
 		return (fixed1);
 	return (fixed2);
 }
 
-Fixed	&Fixed::max(Fixed &fixed1, Fixed &fixed2){
+Fixed	Fixed::max(Fixed &fixed1, Fixed &fixed2){
 	std::cout << "max called : ";
 	if (fixed1 > fixed2)
 		return (fixed1);

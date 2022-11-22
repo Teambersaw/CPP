@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 00:16:28 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/20 15:58:30 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/23 00:19:08 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define POINT_HPP
 
 # include <iostream>
-# include <sstream>
-# include <cstdlib>
 # include "Fixed.hpp"
 
 class Point {
@@ -35,7 +33,7 @@ class Point {
 
 		Fixed const	x;
 		Fixed const	y;
-;
+
 };
 
 #endif
