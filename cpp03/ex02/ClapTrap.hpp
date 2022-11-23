@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:44:03 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/04 14:33:15 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/23 20:24:36 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap {
 		ClapTrap( void );
 		ClapTrap( std::string Name );
 		ClapTrap( ClapTrap const & claptrap );
-		~ClapTrap( void );
+		virtual ~ClapTrap( void );
 
 		ClapTrap & operator=( ClapTrap const &claptrap );
 
