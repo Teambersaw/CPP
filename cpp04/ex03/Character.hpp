@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:28:37 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 13:35:33 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:22:54 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ class Character : public ICharacter {
 	
 	protected:
 
+		AMateria	*inventory[4];
 		std::string _Name;
 };

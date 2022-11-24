@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:39:56 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 11:42:15 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:38:15 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class IMateriaSource {
 	public:
 
 		virtual ~IMateriaSource() {}
+
 		virtual void learnMateria(AMateria*) = 0;
 		virtual AMateria* createMateria(std::string const & type) = 0;
 };

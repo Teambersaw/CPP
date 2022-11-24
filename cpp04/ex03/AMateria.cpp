@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:39:38 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 12:41:44 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:48:00 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ std::string const & AMateria::getType() const {
 	return (this->_type);
 }
 
-void AMateria::use( ICharacter& target) {
+void AMateria::use( Character & target) {
 	std::cout << "*No use for this item*" << std::endl;
 	return ;
 }
