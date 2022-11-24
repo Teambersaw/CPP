@@ -5,28 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 13:03:30 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/08 13:05:35 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/24 10:40:32 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/24 12:49:39 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Cure_HPP
-# define Cure_HPP
+#pragma once
 
 # include <iostream>
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
 
-class Cure {
-
-	protected:
+class Cure : public AMateria {
 
 	public:
 
-		Cure( void );
-		Cure( Cure const &Cure);
-		~Cure( void );
+			Cure( void );
+			Cure( Cure const & Cure );
+			virtual ~Cure( void );
 
-		Cure & operator=( Cure const & Cure);
+			Cure & operator=( Cure const & Cure);
 
+			virtual Cure* clone() const;
+			virtual void use(ICharacter& target);
 };
-
-#endif

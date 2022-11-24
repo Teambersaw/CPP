@@ -1,14 +1,16 @@
 CXX= c++
 
-CXXFLAGS= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -MMD
 
-HEADER= AMateria.hpp ICharater.hpp Ice.hpp Cure.hpp
+HEADER= AMateria.hpp Ice.hpp Cure.hpp ICharacter.hpp Character.hpp MateriaSource.hpp IMateriaSource.hpp
 
-SRCS= main.cpp AMateria.cpp ICharater.cpp Ice.cpp Cure.cpp
+SRCS= main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
+
+NAME= Materia
 
 OBJS= ${SRCS:.cpp=.o}
 
-NAME= Interface
+OBJD= ${SRCS:.cpp=.d}
 
 ${NAME}: ${OBJS} ${HEADER}
 		${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
@@ -16,7 +18,7 @@ ${NAME}: ${OBJS} ${HEADER}
 all: ${NAME}
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJD}
 
 fclean: clean
 	rm -f ${NAME}
@@ -24,4 +26,6 @@ fclean: clean
 re: fclean
 	make all
 
-.PHONY: all clean fclean re
+-include ${OBJD}
+
+.POHNY: all clean fclean re

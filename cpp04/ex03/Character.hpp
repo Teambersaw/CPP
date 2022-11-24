@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 10:40:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 12:49:21 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/24 11:28:37 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/24 13:35:33 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
 # include "ICharacter.hpp"
 
-class AMateria {
+class Character : public ICharacter {
 
 	public:
 
-		AMateria( void );
-		AMateria( AMateria const & AMateria );
-		AMateria( std::string const & type );
-		virtual ~AMateria( void );
+		Character( void );
+		Character( std::string const & name );
+		Character( Character const & Character );
+		virtual ~Character( void );
 
-		AMateria & operator=( AMateria const & AMateria); 
-		std::string const & getType() const;
+		Character & operator=( Character const & Character);
 
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		virtual std::string const & getName() const;
 
+		virtual void equip( AMateria* m );
+		virtual void unequip( int idx );
+
+		virtual void use( int idx, Character& target );
+	
 	protected:
 
-		std::string	_type;
+		std::string _Name;
 };
