@@ -6,13 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:39:38 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 14:48:00 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 23:16:05 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria( void ) {
+AMateria::AMateria( void ) : _type("") {
 	return ;
 }
 
@@ -39,7 +39,11 @@ std::string const & AMateria::getType() const {
 	return (this->_type);
 }
 
-void AMateria::use( Character & target) {
-	std::cout << "*No use for this item*" << std::endl;
+void AMateria::use( ICharacter & target) {
+	std::cout << "*This item cannot be used on" << std::endl;
+	if (target.getName().empty())
+		std::cout << "Unamed*" << std::endl;
+	else
+		std::cout << target.getName() << '*' << std::endl;
 	return ;
 }

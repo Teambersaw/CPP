@@ -6,12 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:28:37 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 15:22:54 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:57:12 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+# include "AMateria.hpp"
 # include "ICharacter.hpp"
 
 class Character : public ICharacter {
@@ -30,9 +31,9 @@ class Character : public ICharacter {
 		virtual void equip( AMateria* m );
 		virtual void unequip( int idx );
 
-		virtual void use( int idx, Character& target );
+		virtual void use( int idx, ICharacter& target );
 	
-	protected:
+	private:
 
 		AMateria	*inventory[4];
 		std::string _Name;

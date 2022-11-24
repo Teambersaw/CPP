@@ -6,17 +6,17 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:39 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 15:37:45 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 23:34:28 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice( void ) : AMateria() {
+Ice::Ice( void ) : AMateria("ice") {
 	return ;
 }
 
-Ice::Ice( Ice const & Ice ) : AMateria() {
+Ice::Ice( Ice const & Ice ) : AMateria("ice") {
 	*this = Ice;
 	return ;
 }
@@ -26,7 +26,9 @@ Ice::~Ice( void ) {
 }
 
 Ice & Ice::operator=( Ice const & Ice ) {
-	return ;
+	if (this != &Ice)
+		return (*this);
+	return (*this);
 }
 
 Ice* Ice::clone() const {
@@ -34,11 +36,11 @@ Ice* Ice::clone() const {
 	return (clone);
 }
 
-void Ice::use( Character & target) {
+void Ice::use( ICharacter & target) {
 	std::cout << "* shoots an ice bolt at ";
 	if (target.getName().empty())
-		std::cout << "Unamed" << std::endl;
+		std::cout << "Unamed*" << std::endl;
 	else
-		std::cout << target.getName() << std::endl;
+		std::cout << target.getName() << '*' << std::endl;
 	return ;
 }

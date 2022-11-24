@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:32 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 14:48:46 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:51:21 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ class Cure : public AMateria {
 			Cure & operator=( Cure const & Cure );
 
 			virtual Cure* clone() const;
-			virtual void use( Character & target );
+			virtual void use( ICharacter & target );
 };

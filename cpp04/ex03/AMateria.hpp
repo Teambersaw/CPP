@@ -6,14 +6,16 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 14:48:16 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:49:38 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
-# include "Character.hpp"
+# include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria {
 
@@ -28,7 +30,7 @@ class AMateria {
 		std::string const & getType() const;
 
 		virtual AMateria* clone() const = 0;
-		virtual void use( Character & target );
+		virtual void use( ICharacter & target );
 
 	protected:
 

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:08 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 14:51:25 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:54:43 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 # include <iostream>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter {
 
@@ -26,5 +28,5 @@ class ICharacter {
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;
 
-		virtual void use(int idx, ICharacter & target) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 };
