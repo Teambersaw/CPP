@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:39 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 23:34:28 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:09:57 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Ice::Ice( void ) : AMateria("ice") {
 	return ;
 }
 
-Ice::Ice( Ice const & Ice ) : AMateria("ice") {
+Ice::Ice( Ice const & Ice ) : AMateria(Ice) {
 	*this = Ice;
 	return ;
 }
@@ -32,7 +32,7 @@ Ice & Ice::operator=( Ice const & Ice ) {
 }
 
 Ice* Ice::clone() const {
-	Ice *clone = new Ice;
+	Ice *clone = new Ice();
 	return (clone);
 }
 

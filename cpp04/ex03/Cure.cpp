@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 23:34:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:09:46 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Cure::Cure( void ) : AMateria("cure") {
 	return ;
 }
 
-Cure::Cure( Cure const & Cure ) : AMateria("cure") {
+Cure::Cure( Cure const & Cure ) : AMateria(Cure) {
 	*this = Cure;
 	return ;
 }
@@ -32,7 +32,7 @@ Cure & Cure::operator=( Cure const & Cure ) {
 }
 
 Cure* Cure::clone() const {
-	Cure *clone = new Cure;
+	Cure *clone = new Cure();
 	return (clone);
 }
 

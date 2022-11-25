@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:31 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 23:35:49 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:17:27 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ MateriaSource & MateriaSource::operator=( MateriaSource const & MateriaSource ) 
 
 void MateriaSource::learnMateria( AMateria* m ) {
 	for (int i = 0; i < 4; i++) {
-		if (this->learn[i]) {
-			learn[i] = m->clone();
+		if (!this->learn[i]) {
+			learn[i] = m;
 			break;
 		}
 	}

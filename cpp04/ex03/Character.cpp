@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:56 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 23:27:05 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:21:29 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Character::Character( Character const & Character ) {
 Character::~Character( void ) {
 	for (int i = 0; i < 4; i++) {
 		if (this->inventory[i])
-				delete inventory[i];
+			delete inventory[i];
 	}
 	return ;
 }
@@ -61,7 +61,7 @@ void Character::equip( AMateria* m ) {
 	{
 		if (this->inventory[i] == NULL)
 		{
-			this->inventory[i] = m->clone();
+			this->inventory[i] = m;
 			break ;
 		}
 	}
