@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/25 11:09:46 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/27 19:01:40 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Cure* Cure::clone() const {
 }
 
 void Cure::use( ICharacter & target) {
-	std::cout << "* heals";
+	std::cout << "* heals ";
 	if (target.getName().empty())
 		std::cout << "Unamed's wounds *" << std::endl;
 	else

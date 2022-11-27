@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:38:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/23 21:24:18 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 22:24:38 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,5 @@ int main( void )
 		delete dog;
 		delete dog2;
 	}
-
 	return (0);
 }

@@ -18,7 +18,7 @@ WrongCat::WrongCat( void ) : WrongAnimal() {
 	return ;
 }
 
-WrongCat::WrongCat( WrongCat const &WrongCat ) : WrongAnimal() {
+WrongCat::WrongCat( WrongCat const &WrongCat ) : WrongAnimal(WrongCat) {
 	std::cout << "Copy WrongCat contructor called" << std::endl;
 	this->type = "WrongCat";
 	*this = WrongCat;

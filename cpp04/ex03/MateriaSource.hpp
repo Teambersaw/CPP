@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:45 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/25 11:15:59 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/27 23:30:31 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ class MateriaSource : public IMateriaSource {
 	private:
 
 		AMateria	*learn[4];
-
 };

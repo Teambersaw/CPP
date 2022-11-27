@@ -19,7 +19,7 @@ Dog::Dog( void ) : Animal() {
 	return ;
 }
 
-Dog::Dog( Dog const &Dog ) : Animal() {
+Dog::Dog( Dog const &Dog ) : Animal(Dog) {
 	std::cout << "Copy Dog contructor called" << std::endl;
 	dog = new Brain();
 	this->type = "Dog";

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:55:44 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/19 19:29:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/25 22:21:58 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Brain {
 
 		Brain( void );
 		Brain( Brain const &Brain);
-		virtual ~Brain( void );
+		~Brain( void );
 
 		Brain & operator=( Brain const & Brain);
 

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:31 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/25 11:17:27 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 00:25:29 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,37 @@ MateriaSource::MateriaSource( MateriaSource const & MateriaSource ) {
 }
 
 MateriaSource::~MateriaSource( void ) {
-	for (int i = 0; i < 4; i++) {
-		if (this->learn[i])
-			delete learn[i];
+	bool answer;
+	
+	for (int i = 0; i < 4; i++)
+	{
+		answer = false;
+		for (int j = i + 1; j < 4; j++)
+		{
+			if (this->learn[i] && (this->learn[i] == this->learn[j]))
+				answer = true;
+		}
+		if (answer == false && this->learn[i])
+			delete this->learn[i];
 	}
-	return ;
 }
 
 MateriaSource & MateriaSource::operator=( MateriaSource const & MateriaSource ) {
 	if (this != &MateriaSource)
 	{
+		bool answer;
+		
 		for (int i = 0; i < 4; i++)
 		{
-			if (this->learn[i])
-				delete learn[i];
-			this->learn[i] = MateriaSource.learn[i]->clone(); 
+			answer = false;
+			for (int j = i + 1; j < 4; j++)
+			{
+				if (this->learn[i] && (this->learn[i] == this->learn[j]))
+					answer = true;
+			}
+			if (answer == false && this->learn[i] )
+				delete this->learn[i];
+			this->learn[i] = MateriaSource.learn[i]->clone();
 		}
 	}
 	return (*this);
@@ -49,9 +65,14 @@ void MateriaSource::learnMateria( AMateria* m ) {
 	for (int i = 0; i < 4; i++) {
 		if (!this->learn[i]) {
 			learn[i] = m;
-			break;
+			return ;
 		}
 	}
+	for (int i = 0; i < 4; i++) {
+		if (learn[i] == m)
+			return ;
+	}
+	delete m;
 	return ;
 }
 

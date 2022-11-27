@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:56 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/25 11:21:29 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/27 20:59:27 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,37 @@ Character::Character( Character const & Character ) {
 }
 
 Character::~Character( void ) {
-	for (int i = 0; i < 4; i++) {
-		if (this->inventory[i])
-			delete inventory[i];
+	bool answer;
+	
+	for (int i = 0; i < 4; i++)
+	{
+		answer = false;
+		for (int j = i + 1; j < 4; j++)
+		{
+			if (this->inventory[i] && (this->inventory[i] == this->inventory[j]))
+				answer = true;
+		}
+		if (answer == false && this->inventory[i])
+				delete this->inventory[i];
 	}
-	return ;
 }
 
 Character & Character::operator=( Character const & Character ) {
 	if (this != &Character)
 	{
+		bool answer;
+		
 		for (int i = 0; i < 4; i++)
 		{
-			if (this->inventory[i])
-				delete inventory[i];
-			this->inventory[i] = Character.inventory[i]->clone(); 
+			answer = false;
+			for (int j = i + 1; j < 4; j++)
+			{
+				if (this->inventory[i] && (this->inventory[i] == this->inventory[j]))
+					answer = true;
+			}
+			if (answer == false && this->inventory[i] )
+				delete this->inventory[i];
+			this->inventory[i] = Character.inventory[i];
 		}
 	}
 	return (*this);
@@ -62,9 +78,14 @@ void Character::equip( AMateria* m ) {
 		if (this->inventory[i] == NULL)
 		{
 			this->inventory[i] = m;
-			break ;
+			return ;
 		}
 	}
+	for (int i = 0; i < 4; i++) {
+		if (this->inventory[i] == m)
+			return ;
+	}
+	delete m;
 	return ;
 }
 

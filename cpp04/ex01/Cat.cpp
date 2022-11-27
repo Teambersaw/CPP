@@ -19,10 +19,10 @@ Cat::Cat( void ) : Animal() {
 	return ;
 }
 
-Cat::Cat( Cat const &Cats ) : Animal() {
+Cat::Cat( Cat const &Cat ) : Animal(Cat) {
 	std::cout << "Copy Cat contructor called" << std::endl;
 	cat = new Brain();
-	*this = Cats;
+	*this = Cat;
 	return ;
 }
 
