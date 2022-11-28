@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:31 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 00:25:29 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:54:07 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ MateriaSource::MateriaSource( void ) {
 }
 
 MateriaSource::MateriaSource( MateriaSource const & MateriaSource ) {
+	for (int i = 0; i < 4; i++) {
+		this->learn[i] = NULL;
+	}
 	*this = MateriaSource;
 	return ;
 }
@@ -53,9 +56,12 @@ MateriaSource & MateriaSource::operator=( MateriaSource const & MateriaSource ) 
 				if (this->learn[i] && (this->learn[i] == this->learn[j]))
 					answer = true;
 			}
-			if (answer == false && this->learn[i] )
+			if (answer == false && this->learn[i] ) {
 				delete this->learn[i];
-			this->learn[i] = MateriaSource.learn[i]->clone();
+				this->learn[i] = NULL;
+			}
+			if (MateriaSource.learn[i])
+				this->learn[i] = MateriaSource.learn[i]->clone();
 		}
 	}
 	return (*this);
@@ -68,11 +74,6 @@ void MateriaSource::learnMateria( AMateria* m ) {
 			return ;
 		}
 	}
-	for (int i = 0; i < 4; i++) {
-		if (learn[i] == m)
-			return ;
-	}
-	delete m;
 	return ;
 }
 

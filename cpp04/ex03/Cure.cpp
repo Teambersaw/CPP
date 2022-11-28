@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/27 19:01:40 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:13:25 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cure & Cure::operator=( Cure const & Cure ) {
 }
 
 Cure* Cure::clone() const {
-	Cure *clone = new Cure();
+	Cure *clone = new Cure(*this);
 	return (clone);
 }
 

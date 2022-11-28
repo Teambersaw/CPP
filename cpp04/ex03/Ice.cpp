@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:39 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/27 01:16:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:13:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Ice & Ice::operator=( Ice const & Ice ) {
 }
 
 Ice* Ice::clone() const {
-	Ice *clone = new Ice();
+	Ice *clone = new Ice(*this);
 	return (clone);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:56 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/27 20:59:27 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:54:05 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ Character::Character( std::string const & name ) : _Name(name) {
 }
 
 Character::Character( Character const & Character ) {
+	for (int i = 0; i < 4; i++) {
+		this->inventory[i] = NULL;
+	}
 	*this = Character;
 	return ;
 }
@@ -60,9 +63,15 @@ Character & Character::operator=( Character const & Character ) {
 				if (this->inventory[i] && (this->inventory[i] == this->inventory[j]))
 					answer = true;
 			}
-			if (answer == false && this->inventory[i] )
+			if (answer == false && this->inventory[i] ) {
 				delete this->inventory[i];
-			this->inventory[i] = Character.inventory[i];
+				this->inventory[i] = NULL;
+			}
+			if (Character.inventory[i])
+			{
+				if (Character.inventory[i]->getType() == "cure")
+					this->inventory[i] = Character.inventory[i]->clone();
+			}
 		}
 	}
 	return (*this);
@@ -81,11 +90,6 @@ void Character::equip( AMateria* m ) {
 			return ;
 		}
 	}
-	for (int i = 0; i < 4; i++) {
-		if (this->inventory[i] == m)
-			return ;
-	}
-	delete m;
 	return ;
 }
 
