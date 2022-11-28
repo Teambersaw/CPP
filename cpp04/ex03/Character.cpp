@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:56 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 20:06:05 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 21:37:10 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Character & Character::operator=( Character const & Character ) {
 	if (this != &Character)
 	{
 		bool answer;
-		
+		this->_Name = Character._Name;
 		for (int i = 0; i < 4; i++)
 		{
 			answer = false;
