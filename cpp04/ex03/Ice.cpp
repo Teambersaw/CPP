@@ -6,28 +6,22 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:39 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 19:13:19 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 20:11:00 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice( void ) : AMateria("ice") {
-	return ;
-}
+Ice::Ice( void ) : AMateria("ice") {}
 
 Ice::Ice( Ice const & Ice ) : AMateria(Ice) {
 	*this = Ice;
-	return ;
 }
 
-Ice::~Ice( void ) {
-	return ;
-}
+Ice::~Ice( void ) {}
 
 Ice & Ice::operator=( Ice const & Ice ) {
-	if (this != &Ice)
-		return (*this);
+	(void) Ice;
 	return (*this);
 }
 

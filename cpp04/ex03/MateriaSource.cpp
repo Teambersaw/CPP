@@ -6,25 +6,21 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:31 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 19:54:07 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 20:07:53 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource( void ) {
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++)
 		this->learn[i] = NULL;
-	}
-	return ;
 }
 
 MateriaSource::MateriaSource( MateriaSource const & MateriaSource ) {
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++)
 		this->learn[i] = NULL;
-	}
 	*this = MateriaSource;
-	return ;
 }
 
 MateriaSource::~MateriaSource( void ) {
@@ -38,8 +34,10 @@ MateriaSource::~MateriaSource( void ) {
 			if (this->learn[i] && (this->learn[i] == this->learn[j]))
 				answer = true;
 		}
-		if (answer == false && this->learn[i])
+		if (answer == false && this->learn[i]) {
 			delete this->learn[i];
+			this->learn[i] = NULL;
+		}
 	}
 }
 
@@ -74,7 +72,6 @@ void MateriaSource::learnMateria( AMateria* m ) {
 			return ;
 		}
 	}
-	return ;
 }
 
 AMateria* MateriaSource::createMateria( std::string const & type ) {

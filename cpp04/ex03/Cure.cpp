@@ -6,28 +6,22 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:15 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 19:13:25 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/28 20:10:14 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure( void ) : AMateria("cure") {
-	return ;
-}
+Cure::Cure( void ) : AMateria("cure") {}
 
 Cure::Cure( Cure const & Cure ) : AMateria(Cure) {
 	*this = Cure;
-	return ;
 }
 
-Cure::~Cure( void ) {
-	return ;
-}
+Cure::~Cure( void ) {}
 
 Cure & Cure::operator=( Cure const & Cure ) {
-	if (this != &Cure)
-		return (*this);
+	(void) Cure;
 	return (*this);
 }
 
