@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 13:23:42 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:38:27 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ int	Bureaucrat::getGrade() const {
 	return (this->grade);
 }
 
-std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs) {
-	o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << '.' << std::endl;
+std::ostream & operator<<(std::ostream & o, Bureaucrat const & Bureaucrat) {
+	o << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade() << '.' << std::endl;
 	return (o);
 }
 
