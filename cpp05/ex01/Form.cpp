@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:47:52 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 14:57:49 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:21:12 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ std::string const & Form::getName( void ) const {
 	return (this->name);
 }
 
-bool & Form::getSign( void ) const {
+bool Form::getSign( void ) const {
 	return (this->sign);
 }
 

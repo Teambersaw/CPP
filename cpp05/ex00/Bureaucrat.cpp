@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 13:23:42 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:23:55 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ Bureaucrat::Bureaucrat( std::string Name, int i ) : name(Name) {
 		this->grade = i;
 }
 
-Bureaucrat::Bureaucrat( Bureaucrat const & Bureaucrat ) : name(Bureaucrat.name) {
-	*this = Bureaucrat;
-}
+Bureaucrat::Bureaucrat( Bureaucrat const & Bureaucrat ) : name(Bureaucrat.name), grade(Bureaucrat.grade) {}
 
 Bureaucrat::~Bureaucrat( void ) {}
 
