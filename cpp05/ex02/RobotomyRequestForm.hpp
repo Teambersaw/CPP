@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 10:40:51 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 22:19:26 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/29 22:11:25 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/29 23:18:22 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
-# include <iostream>
-# include "AMateria.hpp"
-# include "ICharacter.hpp"
+# include "Form.hpp"
 
-class Ice : public AMateria {
+class RobotomyRequestForm : public Form {
 
 	public:
 
-			Ice( void );
-			Ice( Ice const & Ice );
-			virtual ~Ice( void );
+		RobotomyRequestForm( void );
+		RobotomyRequestForm( std::string &target );
+		RobotomyRequestForm( RobotomyRequestForm const & cpy);
+		virtual ~RobotomyRequestForm( void );
 
-			Ice & operator=( Ice const & Ice );
+		RobotomyRequestForm & operator=( RobotomyRequestForm const & rhs);
 
-			virtual Ice* clone() const;
-			virtual void use( ICharacter & target );
+	private:
+
 };
 
 #endif

@@ -6,14 +6,15 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:11 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 10:55:50 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 21:52:11 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
-#include <stdexcept>
-#include <iostream>
+# include <stdexcept>
+# include <iostream>
 
 class Bureaucrat {
 
@@ -30,7 +31,7 @@ class Bureaucrat {
 		};
 
 		Bureaucrat( void );
-		Bureaucrat( std::string Name, int i);
+		Bureaucrat( std::string Name, int grade);
 		Bureaucrat( Bureaucrat const & Bureaucrat);
 		~Bureaucrat( void );
 
@@ -49,3 +50,5 @@ class Bureaucrat {
 };
 
 std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs);
+
+#endif

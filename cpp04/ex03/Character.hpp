@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:28:37 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/27 18:29:17 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:17:50 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 # include "AMateria.hpp"
 # include "ICharacter.hpp"
@@ -38,3 +39,5 @@ class Character : public ICharacter {
 		AMateria	*inventory[4];
 		std::string _Name;
 };
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:38:19 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/25 22:24:38 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:59:32 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int main( void )
 				animal[i] = new Cat;
 			std::cout << std::endl;
 		}
+		animal[1]->getType();
 		for (int i = 0; i < 6; i++) {
 			animal[i]->makeSound();
 		}

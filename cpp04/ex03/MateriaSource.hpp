@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:45 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/28 19:19:46 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:20:18 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 #include "AMateria.hpp"
 #include "IMateriaSource.hpp"
@@ -32,3 +33,5 @@ class MateriaSource : public IMateriaSource {
 
 		AMateria	*learn[4];
 };
+
+#endif

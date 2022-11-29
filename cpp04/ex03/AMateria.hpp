@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/27 00:26:31 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:17:48 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 # include <iostream>
 # include "ICharacter.hpp"
@@ -36,3 +37,5 @@ class AMateria {
 
 		std::string	_type;
 };
+
+#endif

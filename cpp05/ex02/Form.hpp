@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:44:22 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 21:20:34 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 23:03:05 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Form {
 		Form( void );
 		Form( Form const & Form );
 		Form( std::string name, int grade_sign, int grade_exec);
-		~Form( void );
+		virtual ~Form( void );
 
 		Form & operator=( Form const & Form );
 

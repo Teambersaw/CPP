@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 10:40:51 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 22:19:26 by jrossett         ###   ########.fr       */
+/*   Created: 2022/11/29 22:11:35 by jrossett          #+#    #+#             */
+/*   Updated: 2022/11/29 23:18:36 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 
-# include <iostream>
-# include "AMateria.hpp"
-# include "ICharacter.hpp"
+# include "Form.hpp"
 
-class Ice : public AMateria {
+class ShrubberyCreationForm : public Form {
 
 	public:
 
-			Ice( void );
-			Ice( Ice const & Ice );
-			virtual ~Ice( void );
+		ShrubberyCreationForm( void );
+		ShrubberyCreationForm( std::string &target );
+		ShrubberyCreationForm( ShrubberyCreationForm const & cpy);
+		virtual ~ShrubberyCreationForm( void );
 
-			Ice & operator=( Ice const & Ice );
+		ShrubberyCreationForm & operator=( ShrubberyCreationForm const & rhs);
 
-			virtual Ice* clone() const;
-			virtual void use( ICharacter & target );
+	private:
+
 };
 
 #endif

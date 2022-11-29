@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:41:08 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 22:54:43 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:19:41 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 # include <iostream>
 # include "AMateria.hpp"
@@ -30,3 +31,5 @@ class ICharacter {
 
 		virtual void use(int idx, ICharacter& target) = 0;
 };
+
+#endif

@@ -6,11 +6,12 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 10:40:32 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/24 22:51:21 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:19:15 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CURE_HPP
+# define CURE_HPP
 
 # include <iostream>
 # include "AMateria.hpp"
@@ -29,3 +30,5 @@ class Cure : public AMateria {
 			virtual Cure* clone() const;
 			virtual void use( ICharacter & target );
 };
+
+#endif
