@@ -6,11 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:23 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 22:03:36 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/30 16:04:57 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
@@ -19,28 +21,10 @@ int main()
 		Bureaucrat Bastien("Bastien", 1);
 		Bureaucrat Theo("Theo", 75);
 		Bureaucrat Hugo("Hugo", 150);
-		Form		Form1("Apero", 1, 150);
+		ShrubberyCreationForm Form1("oui");
 		//Form		Form2("Apero", 500, 0);
 
-		std::cout << Bastien << Theo << Hugo << std::endl;
-
-		std::cout << Form1 << std::endl;
-		Bastien.signForm(Form1);
-
-		std::cout << std::endl;
-		std::cout << Form1 << std::endl;
-		Hugo.signForm(Form1);
-
-		std::cout << std::endl;
-		Bastien.lower_grade();
-		Bastien.signForm(Form1);
-
-		std::cout << std::endl;
-		std::cout << Form1 << std::endl;
-		Theo.signForm(Form1);
-		
-		std::cout << std::endl;
-		std::cout << Form1 << std::endl;
+		Form1.UseForm();
 	}
 	catch (std::exception const &e) 
 	{

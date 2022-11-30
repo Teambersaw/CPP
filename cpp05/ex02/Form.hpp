@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:44:22 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/29 23:03:05 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/11/30 15:05:07 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ class Form {
 		bool getSign( void ) const;
 		int const & getGradeSign( void ) const;
 		int const & getGradeExec( void ) const;
+
+		virtual void UseForm( void ) const = 0;
 
 	private:
 
