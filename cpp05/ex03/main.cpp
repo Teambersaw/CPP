@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:23 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/01 01:04:02 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/01 13:05:04 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,52 +18,42 @@
 #include "Intern.hpp"
 
 int main()
-{
-// 	try
-// 	{
-// 		Bureaucrat Bastien("Bastien", 1);
-// 		Bureaucrat Theo("Theo", 45);
-// 		Bureaucrat Hugo("Hugo", 146);
-
-// 		PresidentialPardonForm President("Hugo");
-// 		RobotomyRequestForm	Robotomy("JuloT");
-// 		ShrubberyCreationForm Shrubbery("Théo");
-
-// 		std::cout << President << std::endl;
-// 		Bastien.executeForm(President);
-// 		Bastien.signForm(President);
-// 		Bastien.executeForm(President);
-
-// 		std::cout << std::endl;
-// 		std::cout << Shrubbery << std::endl;
-// 		Hugo.signForm(Shrubbery);
-// 		Hugo.executeForm(Shrubbery);
-// 		Hugo.upper_grade();
-
-// 		std::cout << std::endl;
-
-// 		Hugo.signForm(Shrubbery);
-// 		Hugo.executeForm(Shrubbery);
-// 		Theo.executeForm(Shrubbery);
-
-// 		std::cout << std::endl;
-// 		std::cout << Robotomy << std::endl;
-// 		Theo.signForm(Robotomy);
-// 		Theo.executeForm(Robotomy);
-		
-		
-// 		std::cout << President << std::endl;
-// 		std::cout << Shrubbery << std::endl;
-// 		std::cout << Robotomy << std::endl;
-// 	}
-// 	catch (std::exception const &e) 
-// 	{
-// 		std::cerr << "Error" << e.what() << " Make sure the grade is between 1 and 150." << std::endl;
-// 	}{
+{	
+	Bureaucrat Theo("Théo", 45);
+	Bureaucrat Bastien("Bastien", 1);
+	Bureaucrat Hugo("Hugo", 146);
+	Intern someRandomIntern;
+	Form* rrf;
+	Form* bppf;
+	Form* scf;
+	try
 	{
-		Intern someRandomIntern;
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		rrf = someRandomIntern.makeForm("T.O", "T.O REJIM");
 	}
+	catch (const std::exception &e) {
+		std::cout << e.what() << std::endl << std::endl;
+	}
+
+	rrf = someRandomIntern.makeForm("robotomy request", "T.O REJIM");
+	bppf = someRandomIntern.makeForm("presidential pardon", "Marco");
+	scf = someRandomIntern.makeForm("shrubbery creation", "Arboretum");
+	std::cout << std::endl;
+
+	Bastien.executeForm(*rrf);
+	Bastien.signForm(*rrf);
+	Bastien.executeForm(*rrf);
+	std::cout << std::endl;
+
+	Bastien.signForm(*scf);
+	Bastien.executeForm(*scf);
+	std::cout << std::endl;
+
+	Bastien.signForm(*bppf);
+	Bastien.executeForm(*bppf);
+
+	delete rrf;
+	delete bppf;
+	delete scf;
 	return (0);
+	
 }

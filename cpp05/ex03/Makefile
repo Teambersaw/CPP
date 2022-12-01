@@ -2,8 +2,7 @@ CXX= c++
 
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 
-HEADER= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp
-Intern.cpp
+HEADER= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp Intern.hpp Intern.cpp
 
 SRCS= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 

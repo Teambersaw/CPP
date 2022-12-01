@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 00:57:02 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/01 01:21:14 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/01 10:20:21 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include "Form.hpp"
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
 
 class Intern {
 
@@ -27,6 +30,10 @@ class Intern {
 		Intern & operator=( Intern const & rhs );
 
 		Form *makeForm(std::string Form_name, std::string target);
+
+		Form	*shrubbery( std::string target );
+		Form	*robotomy( std::string target );
+		Form	*presidential( std::string target );
 
 		class NotFound : public std::exception {
 			public:
