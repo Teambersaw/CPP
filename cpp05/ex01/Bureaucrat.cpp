@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 22:10:01 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/30 10:47:45 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/01 00:48:38 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,5 @@ void Bureaucrat::signForm( Form & Form ) {
 		std::cerr << this->name << " couldn't sign " << Form.getName() << " because" << e.what() << std::endl;
 		return ;
 	}
-	std::cout << this->name << " signed " << Form.getName() << std::endl;
+	std::cout << this->name << " signed " << Form.getName() << '.' << std::endl;
 }
