@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:14:24 by jrossett          #+#    #+#             */
-/*   Updated: 2022/11/30 21:56:05 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/01 16:36:02 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=( ShrubberyCreationForm 
 void ShrubberyCreationForm::UseForm( void ) const {
 
 	std::ofstream ofs((target + "_shrubbery").c_str());
-
+	if (!ofs.is_open())
+		return ;
 	ofs << "     .{{}}}}}}.              .{{}}}}}}.              .{{}}}}}}.              .{{}}}}}}.      " <<std::endl;
 	ofs << "    {{{{{{(`)}}}.           {{{{{{(`)}}}.           {{{{{{(`)}}}.           {{{{{{(`)}}}.    " <<std::endl;
 	ofs << "   {{{(`)}}}}}}}}}         {{{(`)}}}}}}}}}         {{{(`)}}}}}}}}}         {{{(`)}}}}}}}}}   " <<std::endl;

@@ -6,13 +6,13 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 22:28:53 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/01 22:49:38 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/02 14:30:13 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 #include <iostream>
-#include <cstdint>
+#include <stdint.h>
 
 uintptr_t serialize(Data* ptr) {
 	return (reinterpret_cast<uintptr_t>(ptr));
@@ -24,16 +24,16 @@ Data* deserialize(uintptr_t raw) {
 
 int	main()
 {
-	Data	*ptr;
+	Data	*ptr = new Data;
 	uintptr_t	raw;
 
-	std::cout << ptr->getChar() << std::endl;
-	std::cout << &ptr << std::endl;
-
+	std::cout << "char value : "<< ptr->getChar() << std::endl;
+	std::cout << "adress ptr value : " << &ptr << std::endl;
 	raw = serialize(ptr);
-	std::cout << raw << std::endl;
-	std::cout << &raw << std::endl;
+	std::cout << "uintptr_t value : " << raw << std::endl;
 	ptr = deserialize(raw);
-	std::cout << ptr->getChar() << std::endl;
+	std::cout << "char ptr value : " << ptr->getChar() << std::endl;
+	std::cout << "adress ptr value : " << &ptr << std::endl;
+	delete ptr;
 	return (0);
 }
