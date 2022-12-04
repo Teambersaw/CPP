@@ -1,6 +1,6 @@
 CXX= c++
 
-CXXFLAGS= -Wall -Wextra -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 
 HEADER= Base.hpp A.hpp B.hpp C.hpp
 

@@ -1,10 +1,10 @@
 CXX= c++
 
-CXXFLAGS= -Wall -Wextra -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror --std=c++98
 
-HEADER= 
+HEADER= Convert.hpp
 
-SRCS= 
+SRCS= main.cpp Convert.cpp
 
 NAME= Convert
 

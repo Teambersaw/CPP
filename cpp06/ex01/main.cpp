@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 22:28:53 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/02 14:30:13 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/05 00:47:26 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main()
 	raw = serialize(ptr);
 	std::cout << "uintptr_t value : " << raw << std::endl;
 	ptr = deserialize(raw);
-	std::cout << "char ptr value : " << ptr->getChar() << std::endl;
+	std::cout << "char value : " << ptr->getChar() << std::endl;
 	std::cout << "adress ptr value : " << &ptr << std::endl;
 	delete ptr;
 	return (0);
