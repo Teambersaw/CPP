@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 16:39:14 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/06 19:58:35 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:05:34 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template< typename T >
 	std::cout << "Index: " << i << " value: " << elem << std::endl;
 	}
 
-template< typename T>
+template< typename T >
 
 	void iter( T *tab, int size, void (*f)( T elem, int i) ) {
 		for (int i = 0; i < size; i++) {

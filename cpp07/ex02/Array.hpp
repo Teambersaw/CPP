@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 22:03:54 by jrossett          #+#    #+#             */
-/*   Updated: 2022/12/07 00:25:07 by jrossett         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:37:19 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,29 @@
 # define ARRAY_HPP
 
 # include <iostream>
+# include <stdexcept>
 
 template< typename T >
 class Array {
 	
 	public:
 
-		Array<T>( void ) : a(new T[0]) {}
+		class OutOfRange : public std::exception {
+			public:
+				virtual char const *what() const throw() {
+					return ("Error: Index is out of range !");
+				}
+		};
 
-		Array<T>( unsigned int n ) {
-			std::cout << "called";
-			this->a[n] = new T[n];
+		Array<T>( void ) : a(NULL), N(0) {}
+
+		Array<T>( unsigned int n ): N(n) {
+			this->a = new T[n]();
 		}
 
-		Array<T>( Array const & cpy ) {
-			this->a = new T[cpy.size()];
-			for (unsigned int i = 0; i < cpy.size(); i++) {
+		Array<T>( Array const & cpy ): N(cpy.N) {
+			this->a = new T[this->N];
+			for (unsigned int i = 0; i < this->N; i++) {
 				this->a[i] = cpy.a[i];
 			}
 		}
@@ -39,25 +46,30 @@ class Array {
 		}
 
 		Array & operator=( Array const & cpy ) {
-			delete [] this->a;
-			this->a = new T[cpy.size()];
-			for (unsigned int i = 0; i < cpy.size(); i++) {
-				this->a[i] = cpy.a[i];
+			if (this != &cpy) {
+				delete [] this->a;
+				this->N = cpy.N;
+				this->a = new T[this->N];
+				for (unsigned int i = 0; i < this->N; i++)
+					this->a[i] = cpy.a[i];
 			}
 			return (*this);
 		}
 
 		unsigned int size( void ) {
-			return (sizeof(this->a) * 1 / sizeof(T));
+			return (this->N);
 		}
 
-		T	const &getarray( unsigned int n) {
-			return (a[n]);
+		T	&operator[]( unsigned int i ) {
+			if (i >= this->N)
+				throw(OutOfRange());
+			return (this->a[i]);
 		}
 
 	private:
 
 		T *a;
+		unsigned int N;
 
 };
 

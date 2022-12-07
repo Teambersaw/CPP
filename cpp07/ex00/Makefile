@@ -6,7 +6,7 @@ HEADER= whatever.hpp
 
 SRCS= main.cpp
 
-NAME= Whaterver
+NAME= Whatever
 
 OBJS= ${SRCS:.cpp=.o}
 
